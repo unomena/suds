@@ -22,6 +22,7 @@ import urllib2 as u2
 import base64
 import socket
 from suds.transport import *
+from suds.transport.httpsconnectionv3 import *
 from suds.properties import Unskin
 from urlparse import urlparse
 from cookielib import CookieJar
@@ -136,6 +137,7 @@ class HttpTransport(Transport):
         """
         handlers = []
         handlers.append(u2.ProxyHandler(self.proxy))
+        handlers.append(HTTPSHandlerV3())
         return handlers
             
     def u2ver(self):
