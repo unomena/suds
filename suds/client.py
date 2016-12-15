@@ -711,8 +711,8 @@ class SoapClient:
 
     def location(self):
         p = Unskin(self.options)
-        return p.get('location', self.method.location)
-    
+        return p.get('location', self.method.location).encode('utf8')
+
     def last_sent(self, d=None):
         key = 'tx'
         messages = self.client.messages
