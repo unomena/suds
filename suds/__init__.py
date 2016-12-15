@@ -26,7 +26,7 @@ import sys
 # Project properties
 #
 
-__version__ = '0.4.unomena.2'
+__version__ = '0.4.unomena.4'
 __build__="GA R699-20100913"
 
 #
